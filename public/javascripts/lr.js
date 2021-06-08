@@ -1,3 +1,5 @@
+const { text } = require("express");
+
 let x_vals = [];
 let y_vals = [];
 
@@ -22,7 +24,7 @@ function demapY(val) {
 const opt = tf.train.sgd(learning_rate);
 
 function setup() {
-    createCanvas(500, 500);
+    createCanvas(screen.width*95/100, screen.height*13/20);
     background(0);
     m = tf.scalar(random(1)).variable();
     b = tf.scalar(random(1)).variable();
@@ -54,6 +56,11 @@ function draw() {
             const ys = tf.tensor1d(y_vals);
             opt.minimize(() => loss(predict(x_vals), ys));
         }
+        else{
+            stroke(255);
+            textSize(32)
+            text("LOADING DATA",width/2,height/2)
+        }
     
         background(0);
         stroke(255);
@@ -61,7 +68,6 @@ function draw() {
         for (let i = 0; i < x_vals.length; i++) {
             let px = demapX(x_vals[i]);
             let py = demapY(y_vals[i]);
-    
             point(px, py);
         }
     
