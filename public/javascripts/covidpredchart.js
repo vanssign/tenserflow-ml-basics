@@ -1,3 +1,5 @@
+//build residual plot
+// learning_rate based on number of data points
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart;
 var activeCases = [];
@@ -53,7 +55,7 @@ let start_date = 432;
 let end_date;
 let m, b;
 
-const learning_rate = 0.005;
+const learning_rate = 0.0005;
 
 const opt = tf.train.sgd(learning_rate);
 

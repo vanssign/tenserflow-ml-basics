@@ -1,4 +1,3 @@
-const { text } = require("express");
 
 let x_vals = [];
 let y_vals = [];
@@ -55,11 +54,6 @@ function draw() {
         if (x_vals.length > 0) {
             const ys = tf.tensor1d(y_vals);
             opt.minimize(() => loss(predict(x_vals), ys));
-        }
-        else{
-            stroke(255);
-            textSize(32)
-            text("LOADING DATA",width/2,height/2)
         }
     
         background(0);

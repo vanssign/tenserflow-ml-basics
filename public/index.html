@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tenserflow and ML</title>
+    <title>Covid Active Case</title>
 </head>
+
 <body>
-    <h1>Tenserflow and ML visuals</h1>
-    <p>Caution: The following uses GPU. Make sure your computer can handle it!</p>
-    <ul>
-        <li><a href="/linear-regression.html">Linear Regression</a></li>
-        <li><a href="/xor.html">XOR using Models</a></li>
-        <li><a href="/covid-prediction.html">Covid Prediction Using Linear Regression</a></li>
-    </ul>
+    <div style="margin:12px;">
+        <h1>Active Covid Case Prediction</h1>
+        <div>Prediction for Active cases of next date <span id="next_date_container"></span>: <span id="prediction">Predicting</span></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"
+        integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <canvas id="myChart" width="400" height="400"></canvas>
+    <script src="javascripts/covidpredchart.js"></script>
 </body>
+
 </html>
