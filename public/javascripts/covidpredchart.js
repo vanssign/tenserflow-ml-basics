@@ -51,7 +51,7 @@ let date_vals = [];
 let chart_data = [];
 
 
-let start_date = 432;
+let start_date = 462;
 let end_date;
 let m, b;
 
