@@ -55,7 +55,7 @@ let start_date = 462;
 let end_date;
 let m, b;
 
-const learning_rate = 0.0005;
+const learning_rate = 0.00005;
 
 const opt = tf.train.sgd(learning_rate);
 

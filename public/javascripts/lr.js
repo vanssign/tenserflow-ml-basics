@@ -1,4 +1,3 @@
-
 let x_vals = [];
 let y_vals = [];
 

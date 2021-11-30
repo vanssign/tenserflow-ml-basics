@@ -27,7 +27,7 @@ let start_date=432;
 let end_date=452;
 let m, b;
 
-const learning_rate = 0.005;
+const learning_rate = 0.0005;
 
 function mapX(val) {
     return map(val, 0, width, 0, 50)
